@@ -14,12 +14,12 @@ public class Ball extends Bidang3D {
 
     @Override
     public Double keliling() {
-        return 4d / 3d * Math.PI * r * r * r;
+        return 4d / 3d * Math.PI * Math.pow(r, 3);
     }
 
     @Override
     public Double volume() {
-        return 4d * Math.PI * r * r;
+        return 4d * Math.PI * Math.pow(r, 2);
     }
 
     @Override

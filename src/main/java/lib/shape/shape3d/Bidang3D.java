@@ -5,7 +5,8 @@ public abstract class Bidang3D implements Shape3D {
 
     @Override
     public String toString() {
-        return String.format("%-20s %-15f %-15f", this.name, this.volume(), this.keliling());
+        return String.format("nama\t:%-20s%nluas\t:%-15fkeliling:%-15f%n---%n", this.name, this.volume(),
+                this.keliling());
     }
 
 }

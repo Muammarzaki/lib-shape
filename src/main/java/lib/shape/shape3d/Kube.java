@@ -2,21 +2,22 @@ package lib.shape.shape3d;
 
 import java.util.UUID;
 
-public class Kubik extends Bidang3D {
+public class Kube extends Bidang3D {
 
     private Double[] rusuk = new Double[3];
 
-    public Kubik(String name, Double longs, Double widht, Double hight) {
-        this.rusuk[0] = longs;
-        this.rusuk[1] = widht;
-        this.rusuk[2] = hight;
+    public Kube(String name, Double side) {
+        this.rusuk[0] = side;
+        this.rusuk[1] = side;
+        this.rusuk[2] = side;
         super.name = name;
     }
 
-    public Kubik(Double longs, Double widht, Double hight) {
-        this.rusuk[0] = longs;
-        this.rusuk[1] = widht;
-        this.rusuk[2] = hight;
+    public Kube(Double side) {
+        this.rusuk[0] = side;
+        this.rusuk[1] = side;
+        this.rusuk[2] = side;
+
         this.name = UUID.randomUUID().toString();
     }
 
@@ -27,7 +28,7 @@ public class Kubik extends Bidang3D {
 
     @Override
     public Double volume() {
-        return rusuk[0] * rusuk[1] * rusuk[2];
+        return Math.pow(this.rusuk[0], 3);
     }
 
     @Override
