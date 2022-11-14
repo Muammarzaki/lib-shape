@@ -2,18 +2,21 @@ package lib.shape.shape3d;
 
 import java.util.UUID;
 
-public class Blok extends Bidang3D {
+/**
+ * balok
+ */
+public class Block extends Bidang3D {
 
     private Double[] rusuk = new Double[3];
 
-    public Blok(String name, Double longs, Double widht, Double hight) {
+    public Block(String name, Double longs, Double widht, Double hight) {
         this.rusuk[0] = longs;
         this.rusuk[1] = widht;
         this.rusuk[2] = hight;
         super.name = name;
     }
 
-    public Blok(Double longs, Double widht, Double hight) {
+    public Block(Double longs, Double widht, Double hight) {
         this.rusuk[0] = longs;
         this.rusuk[1] = widht;
         this.rusuk[2] = hight;
@@ -21,7 +24,7 @@ public class Blok extends Bidang3D {
     }
 
     @Override
-    public Double keliling() {
+    public Double getCircumference() {
         return (rusuk[0] * rusuk[1] * 4) + (rusuk[1] * rusuk[2] * 2);
     }
 

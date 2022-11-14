@@ -4,7 +4,7 @@ public interface Shape3D extends Comparable<Shape3D> {
     /**
      * @return
      */
-    Double keliling();
+    Double getCircumference();
 
     /**
      * volume of shape3d

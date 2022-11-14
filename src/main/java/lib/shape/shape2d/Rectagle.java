@@ -2,26 +2,20 @@ package lib.shape.shape2d;
 
 import java.util.UUID;
 
-/*
+/**
  * persegi panjang
  */
 public class Rectagle extends Bidang2D {
     private Double[] s = new Double[4];
 
-    public Rectagle(String name, Double s) {
-        this.s[0] = s;
-        this.s[1] = s;
-        super.name = name;
-    }
-
-    public Rectagle(Double... s) {
-        this.s = s;
+    public Rectagle(Double... sides) {
+        this.s = sides;
         this.name = UUID.randomUUID().toString();
     }
 
-    public Rectagle(String name, Double s1, Double s2) {
-        this.s[0] = s1;
-        this.s[1] = s2;
+    public Rectagle(String name, Double sideWidht, Double sideHight) {
+        this.s[0] = sideWidht;
+        this.s[1] = sideHight;
         super.name = name;
     }
 
@@ -31,12 +25,12 @@ public class Rectagle extends Bidang2D {
     }
 
     @Override
-    public Double keliling() {
+    public Double getCircumference() {
         return (s[0] + s[1]) * 2;
     }
 
     @Override
-    public Double luas() {
+    public Double getArea() {
         return s[0] * s[1];
     }
 
@@ -48,7 +42,7 @@ public class Rectagle extends Bidang2D {
     /**
      * get side of rectangle
      */
-    public Double[] getS() {
+    public Double[] getSides() {
         return s;
     }
 

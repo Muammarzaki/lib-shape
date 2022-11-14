@@ -5,6 +5,7 @@ import java.util.UUID;
 /*
  * segitiga
  */
+
 public class Triangle extends Bidang2D {
     private Double[] s = new Double[3];
 
@@ -46,13 +47,12 @@ public class Triangle extends Bidang2D {
     }
 
     @Override
-    public Double keliling() {
-        
+    public Double getCircumference() {
         return s[0] + s[1] + s[2];
     }
 
     @Override
-    public Double luas() {
+    public Double getArea() {
         return s[0] * s[1] * 0.5;
     }
 

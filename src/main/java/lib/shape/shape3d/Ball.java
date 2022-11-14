@@ -1,20 +1,23 @@
 package lib.shape.shape3d;
 
+/**
+ * bola
+ */
 public class Ball extends Bidang3D {
 
     private Double d;
 
     private Double r;
 
-    public Ball(String name, Double d) {
-        this.d = d;
+    public Ball(String name, Double diameter) {
+        this.d = diameter;
         this.r = d / 2;
         super.name = name;
     }
 
     @Override
-    public Double keliling() {
-        return 4d / 3d * Math.PI * Math.pow(r, 3);
+    public Double getCircumference() {
+        return 4d / 3d * Math.PI * Math.pow(r, 2);
     }
 
     @Override

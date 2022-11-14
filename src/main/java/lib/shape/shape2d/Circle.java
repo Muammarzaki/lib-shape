@@ -2,34 +2,34 @@ package lib.shape.shape2d;
 
 import java.util.UUID;
 
-/*
+/**
  * lingkaran
  * 
  */
-public class Cicle extends Bidang2D {
+public class Circle extends Bidang2D {
 
     private Double d;
     private Double r;
 
-    public Cicle(Double d) {
-        this.d = d;
-        this.r = d / 2;
+    public Circle(Double diameter) {
+        this.d = diameter;
+        this.r = diameter / 2;
         super.name = UUID.randomUUID().toString();
     }
 
-    public Cicle(String name, Double d) {
-        this.d = d;
-        this.r = d / 2;
+    public Circle(String name, Double diameter) {
+        this.d = diameter;
+        this.r = diameter / 2;
         super.name = name;
     }
 
     @Override
-    public Double keliling() {
+    public Double getCircumference() {
         return Math.PI * this.r * 2;
     }
 
     @Override
-    public Double luas() {
+    public Double getArea() {
         return Math.PI * Math.pow(this.r, 2d);
     }
 
@@ -38,7 +38,7 @@ public class Cicle extends Bidang2D {
      * 
      * @return
      */
-    public Double getD() {
+    public Double getDiameter() {
         return d;
     }
 
@@ -47,7 +47,7 @@ public class Cicle extends Bidang2D {
      * 
      * @return
      */
-    public Double getR() {
+    public Double getRadius() {
         return r;
     }
 

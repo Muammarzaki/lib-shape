@@ -2,9 +2,8 @@ package lib.shape.shape2d;
 
 import java.util.UUID;
 
-/* 
- *belah ketupat
- 
+/**
+ * belah ketupat
  */
 public class Rhombus extends Bidang2D {
 
@@ -27,20 +26,20 @@ public class Rhombus extends Bidang2D {
     /*
      * (non-Javadoc)
      * 
-     * @see com.shape.shape2d.Shape2D#keliling()
+     * @see com.shape.shape2d.Shape2D#getCircumference()
      */
     @Override
-    public Double keliling() {
+    public Double getCircumference() {
         return s * 4d;
     }
 
     /*
      * (non-Javadoc)
      * 
-     * @see com.shape.shape2d.Shape2D#luas()
+     * @see com.shape.shape2d.Shape2D#getArea()
      */
     @Override
-    public Double luas() {
+    public Double getArea() {
         return 0.5 * diagonal[0] * diagonal[1];
     }
 
@@ -54,7 +53,7 @@ public class Rhombus extends Bidang2D {
      * 
      * @return
      */
-    public Double getS() {
+    public Double getSide() {
         return s;
     }
 
